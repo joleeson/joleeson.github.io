@@ -8,6 +8,8 @@ body {
 }
 
 .navbar {
+  font-size: 16px;
+  font-weight: bold;
   margin-bottom: 20px;
 }
 
@@ -15,13 +17,13 @@ div#content {
 	width:700px;
 	margin-left: 20px;
 	margin-right: auto;
-	text-align:left
-  padding-top: 20px;
-  padding-bottom: 20px;
+	text-align: justify;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 div#header{
-  padding-top: 60px;
+  padding-top: 10px;
 	font-size: 24px;
 	font-weight: bold;
   padding-bottom: 10px;
@@ -36,7 +38,7 @@ div.name{
 
 p.details{
   padding-top: 8px;
-	font-size: 18px;
+	font-size: 16px;
 	font-weight: bold;
   padding-bottom: 8px;
   color: #0081DD;
