@@ -112,10 +112,17 @@
     <script src="assets/js/ie10-viewport-bug-workaround.js"></script>
 
     <script>
-      // Open all links in a new tab and add security rel
+      // Open external links in a new tab and add security rel
       document.querySelectorAll('a[href]').forEach(a => {
-        a.setAttribute('target', '_blank');
-        a.setAttribute('rel', 'noopener noreferrer');
+        try {
+          const url = new URL(a.href, location.href);
+          if (url.origin !== location.origin) {
+            a.setAttribute('target', '_blank');
+            a.setAttribute('rel', 'noopener noreferrer');
+          }
+        } catch (e) {
+          // ignore invalid URLs
+        }
       });
     </script>
   </body>
